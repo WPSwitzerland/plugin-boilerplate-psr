@@ -11,9 +11,11 @@ Author URI: https://github.com/mhmli/
 use MHM\WordPress\Plugin as Plugin;
 
 // always required
-function __autoload($class) {
-	$class = 'classes/' . str_replace('\\', '/', $class) . '.php';
-	@include_once($class);
-}
+spl_autoload_register(function ($class) {
+	if(strpos('MHM',$class)==0){
+		$class = 'Classes/' . str_replace('\\', '/', $class) . '.php';
+		@include_once($class);
+	}
+});
 
 new Plugin();
