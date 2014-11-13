@@ -14,7 +14,7 @@ use MHM\WordPress\Plugin as Plugin;
 spl_autoload_register(function ($class) {
 	if(strpos('MHM',$class)==0){
 		$class = 'Classes/' . str_replace('\\', '/', $class) . '.php';
-		@include_once($class);
+		require_once($class);
 	}
 });
 
