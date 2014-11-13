@@ -8,7 +8,7 @@ Version: 1.0
 Author URI: https://github.com/mhmli/
 */
 
-use MHM\WordPress\Plugin as Plugin;
+use MHM\WordPress\Plugin as WpPluginDefault;
 
 // always required
 spl_autoload_register(function ($class) {
@@ -18,4 +18,4 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-new Plugin();
+new WpPluginDefault();
