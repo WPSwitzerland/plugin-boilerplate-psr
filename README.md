@@ -1,7 +1,7 @@
 # WordPress plugin starter code
 
 ## Description
-A starting point for development of a WordPress plugin using PHP Namespaces.
+A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 5.3 or newer.
 
 ## Usage
 This code has no function of its own. It is a starting point for plugin developers. 
@@ -28,7 +28,7 @@ You're currently reading the contents of ``README.md`` - the file ``README.txt``
 
 ## Changelog
 
-### 2.0.1
+### 2.0.2, 2.0.1
 * Improvements to this README
 
 ### 2.0.0
