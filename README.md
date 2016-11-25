@@ -28,6 +28,9 @@ You're currently reading the contents of ``README.md`` - the file ``README.txt``
 
 ## Changelog
 
+### 2.0.3
+* Remove and ignore invivible OS X ``.DS_Store`` files from the repository.
+
 ### 2.0.2, 2.0.1
 * Improvements to this README
 
