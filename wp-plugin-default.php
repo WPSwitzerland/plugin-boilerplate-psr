@@ -1,0 +1,39 @@
+<?php
+/*
+Plugin Name: PLUGIN NAME
+Plugin URI: PLUGIN URI
+Description: DESCRIPTION
+Author: PLUGIN AUTHOR
+Version: 0.0.1
+Author URI: AUTHOR URI
+Text Domain: PLUGIN-KEY
+Domain Path: /Resources/Private/Language
+*/
+
+if (version_compare($wp_version, '4.6', '<') || version_compare(PHP_VERSION, '5.3', '<')) {
+    function PLUGIN_KEY_compatability_warning()
+    {
+        echo '<div class="error"><p>'.sprintf(
+            __('“%1$s” requires PHP %2$s (or newer) and WordPress %3$s (or newer) to function properly. Your site is using PHP %4$s and WordPress %5$s. Please upgrade. The plugin has been automatically deactivated.', 'PLUGIN-KEY'),
+            'PLUGIN NAME',
+            '5.3',
+            '4.6',
+            PHP_VERSION,
+            $GLOBALS['wp_version']
+        ).'</p></div>';
+        if (isset($_GET['activate'])) {
+            unset($_GET['activate']);
+        }
+    }
+    add_action('admin_notices', 'PLUGIN_KEY_compatability_warning');
+
+    function PLUGIN_KEY_deactivate_self()
+    {
+        deactivate_plugins(plugin_basename(__FILE__));
+    }
+    add_action('admin_init', 'PLUGIN_KEY_deactivate_self');
+
+    return;
+} else {
+    include 'Classes/Plugin.php';
+}
