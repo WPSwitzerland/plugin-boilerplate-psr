@@ -22,7 +22,7 @@ class Plugin
      */
     public function loadPluginTextdomain()
     {
-        load_plugin_textdomain('PLUGIN_KEY', false, dirname(plugin_basename(__FILE__)).'/Resources/Private/Language');
+        load_plugin_textdomain('TEXT-DOMAIN', false, dirname(plugin_basename(__FILE__)).'/Resources/Private/Language');
     }
 }
 

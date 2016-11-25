@@ -20,6 +20,7 @@ You're currently reading the contents of ``README.md`` - the file ``README.txt``
     - *PLUGIN AUTHOR* is your name or company name.
     - *AUTHOR URI* is the address of your website.
     - *TEXT-DOMAIN* is the text domain which you're using for translations. This should ideally match the folder name of the plugin.
+    - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.
 6. Replace the namespace ``YourUniqueTopLevelNamespace\PascalCasePluginKey`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase).
 7. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
 8. Check and replace the PHP version number ``5.3`` and the WordPress version number ``4.6`` in the main plugin file, according to your own plugin's requirements.
@@ -27,6 +28,9 @@ You're currently reading the contents of ``README.md`` - the file ``README.txt``
 9. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is enssential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
 
 ## Changelog
+
+### 2.0.4
+* Fix and improve description and usage of ``PLUGIN_PREFIX`` and ``TEXT-DOMAIN``.
 
 ### 2.0.3
 * Remove and ignore invivible OS X ``.DS_Store`` files from the repository.
