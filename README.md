@@ -29,6 +29,10 @@ You're currently reading the contents of ``README.md`` - the file ``README.txt``
 
 ## Changelog
 
+### 2.0.5
+* Add markers to the code to enable automated search-and-replace.
+* Move languages target folder to /languages.
+
 ### 2.0.4
 * Fix and improve description and usage of ``PLUGIN_PREFIX`` and ``TEXT-DOMAIN``.
 
