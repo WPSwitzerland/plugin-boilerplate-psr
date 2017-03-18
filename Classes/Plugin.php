@@ -1,6 +1,6 @@
 <?php
 
-namespace ###AUTHOR_NAMESPACE###\###PLUGIN_KEY_PASCAL_CASE###;
+namespace AUTHOR_NAMESPACE\PLUGIN_KEY_PASCAL_CASE;
 
 class Plugin
 {
@@ -14,7 +14,7 @@ class Plugin
 
     public function __construct()
     {
-        add_action('plugins_loaded', array($this, 'loadTextDomain'));
+        add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
     }
 
     /**
@@ -22,7 +22,7 @@ class Plugin
      */
     public function loadPluginTextdomain()
     {
-        load_plugin_textdomain('TEXT-DOMAIN', false, dirname(plugin_basename(__FILE__)).'/languages');
+        load_plugin_textdomain('TEXT-DOMAIN', false, dirname(dirname(plugin_basename(__FILE__))).'/languages');
     }
 }
 
