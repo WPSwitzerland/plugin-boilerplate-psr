@@ -1,6 +1,6 @@
 <?php
 
-namespace ###AUTHOR_NAMESPACE###\###PLUGIN_KEY_PASCAL_CASE###;
+namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
 class Plugin
 {
@@ -22,7 +22,7 @@ class Plugin
      */
     public function loadPluginTextdomain()
     {
-        load_plugin_textdomain('TEXT-DOMAIN', false, dirname(plugin_basename(__FILE__)).'/languages');
+        load_plugin_textdomain('TEXT_DOMAIN', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 }
 
