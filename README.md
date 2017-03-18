@@ -44,6 +44,9 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 
 ## Changelog
 
+### 2.3.1
+* Add README_BLANK.md file as a basis for the real plugin.
+
 ### 2.3.0
 * Amend markers to reflect changes in the [Plugin Builder](https://github.com/WPSwitzerland/plugin-builder) script.
 * Bump WordPress core version requirement to 4.7.
