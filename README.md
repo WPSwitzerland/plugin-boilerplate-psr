@@ -3,7 +3,9 @@
 ## Description
 A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 5.3 or newer.
 
-You're currently reading the contents of ``README.md``. The file ``README.txt`` is the one which the WordPress Plugin Repository needs.
+You're currently reading the contents of ``README.md``, which is not required for your plugin. (Although your own version is recommended for documentational purposes.)
+
+The file ``README.txt`` is the one which the WordPress Plugin Repository needs.
 
 ## Usage
 This code has no function of its own. It is a starting point for plugin developers. Do not install this code as a plugin without first customizing it.
@@ -41,6 +43,10 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 10. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
 
 ## Changelog
+
+### 2.3.0
+* Amend markers to reflect changes in the [Plugin Builder](https://github.com/WPSwitzerland/plugin-builder) script.
+* Bump WordPress core version requirement to 4.7.
 
 ### 2.2.0
 * Update WordPress version requirement to 4.7.
