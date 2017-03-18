@@ -3,7 +3,7 @@
 Plugin Name: PLUGIN_NAME
 Plugin URI: PLUGIN_URI
 Description: PLUGIN_DESCRIPTION
-Author: PLUGIN_AUTHOR
+Author: PLUGIN_AUTHOR (AUTHOR_EMAIL)
 Version: 0.0.1
 Author URI: AUTHOR_URI
 Text Domain: TEXT_DOMAIN

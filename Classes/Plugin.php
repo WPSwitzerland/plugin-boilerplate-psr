@@ -1,6 +1,6 @@
 <?php
 
-namespace AUTHOR_NAMESPACE\PLUGIN_KEY_PASCAL_CASE;
+namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
 class Plugin
 {
