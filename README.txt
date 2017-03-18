@@ -1,4 +1,4 @@
-=== PLUGIN NAME ===
+=== PLUGIN_NAME ===
 Contributors: YOUR WORDPRESS.ORG USERNAME (LOWERCASE)
 Donate link: URI, IF YOU HAVE ONE
 Tags: COMMA, SEPARATED, RELEVANT, TAGS
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Description of your plugin. Multiple paragraphs are acceptable. Simple HTML syntax - links, code tags - is supported.
+PLUGIN_DESCRIPTION
 
 == Installation ==
 

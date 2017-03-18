@@ -33,16 +33,21 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
     - *PLUGIN_AUTHOR* is your name or company name.
     - *AUTHOR_URI* is the address of your website.
     - *AUTHOR_EMAIL* is your email address.
-    - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin.
+    - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin; lowercase and featuring underscores instead of spaces.
     - *PLUGIN_DOMAIN* is the slug of the plugin: for example, this repository's slug is *wpswitzerland/wp-plugin-default*.
     - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.
-7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_KEY_PASCAL_CASE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\WpPluginDefault``.)
+7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_NAMESPACE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\WpPluginDefault``.)
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
 9. Check and replace the PHP version number *5.3* and the WordPress version number *4.7* in the main plugin file and in the ``composer.json`` file, according to your own plugin's requirements.
     - As this code uses [PHP namespaces](http://php.net/manual/en/language.namespaces.php), the code will only work in PHP 5.3 or newer. Bear in mind that WordPress officially [still supports servers using PHP 5.2.4](https://wordpress.org/about/requirements/), so the version control code in the main plugin file ensures that your plugin won't break older environments. (It will automatically refuse to be activated.)
 10. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
 
 ## Changelog
+
+### 2.3.2
+* Update README.txt with markers.
+* Minor change to README_BLANK.md contents.
+* Update marker references in this README.
 
 ### 2.3.1
 * Add README_BLANK.md file as a basis for the real plugin.

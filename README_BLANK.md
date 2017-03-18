@@ -9,7 +9,7 @@ PLUGIN_DESCRIPTION
 ## Changelog
 
 ### 0.0.1
-* Starting point.
+* Initial development version.
 
 ## Contributors
 * PLUGIN_AUTHOR (AUTHOR_EMAIL)
