@@ -1,12 +1,12 @@
 <?php
 
-namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
+namespace AUTHOR_NAMESPACE\PLUGIN_KEY_PASCAL_CASE;
 
 class Plugin
 {
     public function dump($var, $die = false)
     {
-        echo '<pre>'.print_r($var, 1).'</pre>';
+        echo '<pre>' . print_r($var, 1) . '</pre>';
         if ($die) {
             die();
         }
@@ -14,7 +14,7 @@ class Plugin
 
     public function __construct()
     {
-        add_action('plugins_loaded', array($this, 'loadTextDomain'));
+        add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
     }
 
     /**
@@ -22,7 +22,7 @@ class Plugin
      */
     public function loadPluginTextdomain()
     {
-        load_plugin_textdomain('TEXT_DOMAIN', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('TEXT_DOMAIN', false, dirname(dirname(plugin_basename(__FILE__))) . '/languages');
     }
 }
 
