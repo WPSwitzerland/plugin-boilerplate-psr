@@ -6,7 +6,7 @@ class Plugin
 {
     public function dump($var, $die = false)
     {
-        echo '<pre>'.print_r($var, 1).'</pre>';
+        echo '<pre>' . print_r($var, 1) . '</pre>';
         if ($die) {
             die();
         }
@@ -22,7 +22,7 @@ class Plugin
      */
     public function loadPluginTextdomain()
     {
-        load_plugin_textdomain('TEXT-DOMAIN', false, dirname(dirname(plugin_basename(__FILE__))).'/languages');
+        load_plugin_textdomain('TEXT_DOMAIN', false, dirname(dirname(plugin_basename(__FILE__))) . '/languages');
     }
 }
 

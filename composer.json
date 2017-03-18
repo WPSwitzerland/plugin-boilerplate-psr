@@ -1,14 +1,14 @@
 {
-    "name": "###PLUGIN_DOMAIN###",
-    "description": "###PLUGIN_DESCRIPTION###",
+    "name": "PLUGIN_DOMAIN",
+    "description": "PLUGIN_DESCRIPTION",
     "keywords": ["wordpress", "plugin"],
     "version": "0.0.1",
-    "homepage": "https://wpswitzerland.ch/",
+    "homepage": "PLUGIN_URI",
     "license": "GPL-3.0+",
     "authors": [{
-        "name": "###PLUGIN_AUTHOR###",
-        "email": "###PLUGIN_AUTHOR_EMAIL###",
-        "homepage": "###PLUGIN_AUTHOR_URI###"
+        "name": "PLUGIN_AUTHOR",
+        "email": "AUTHOR_EMAIL",
+        "homepage": "AUTHOR_URI"
     }],
     "type": "wordpress-plugin",
     "require": {
