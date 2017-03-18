@@ -2,7 +2,7 @@
 Contributors: YOUR WORDPRESS.ORG USERNAME (LOWERCASE)
 Donate link: URI, IF YOU HAVE ONE
 Tags: COMMA, SEPARATED, RELEVANT, TAGS
-Requires at least: 4.6
+Requires at least: 4.7
 Tested up to: 4.7.3
 Stable tag: 0.0.1
 License: GPLv3
