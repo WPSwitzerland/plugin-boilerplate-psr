@@ -20,6 +20,7 @@ You're currently reading the contents of ``README.md``. The file ``README.txt`` 
     - *PLUGIN_AUTHOR* is your name or company name.
     - *AUTHOR_URI* is the address of your website.
     - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin.
+    - *PLUGIN_DOMAIN* is the slug of the plugin: for example, this repository's slug is *wpswitzerland/wp-plugin-default*.
     - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.
 7. Replace the namespace ``###AUTHOR_NAMESPACE###\###PLUGIN_KEY_PASCAL_CASE###`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase).
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
