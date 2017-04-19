@@ -4,11 +4,30 @@ namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
 class Plugin
 {
+ 
+    public static $instance;
 
-    public $name    = '';
-    public $pfx     = '';
-    public $version = '';
-    public $file    = '';
+    public static $name    = '';
+    public static $pfx     = '';
+    public static $version = '';
+    public static $file    = '';
+
+    public static function getInstance($file)
+    {
+        if(!isset(self::$instance) && !(self::$instance instanceof Plugin))
+        {
+            self::$instance = new Plugin;
+            self::$instance->run();
+
+            $data = get_plugin_data($file);
+
+            self::$instance->name       = $data['Name'];
+            self::$instance->pfx        = 'PLUGIN_PREFIX';
+            self::$instance->version    = $data['Version'];
+            self::$instance->file       = $file;
+        }
+        return self::$instance;
+    }
 
     public function dump($var, $die = false)
     {
@@ -18,23 +37,7 @@ class Plugin
         }
     }
 
-    public function __construct()
-    {
-        $this->name = 'PLUGIN_NAME';
-    }
-
-    public function set_PluginData($file)
-    {
-
-        $data = get_plugin_data($file);
-
-        $this->name     = $data['Name'];
-        $this->pfx      = 'PLUGIN_PREFIX';
-        $this->version  = $data['Version'];
-        $this->file     = $file;
-    }
-
-    public function run()
+    private function run()
     {
         add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
     }

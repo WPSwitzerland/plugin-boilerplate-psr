@@ -96,6 +96,7 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 ## Contributors
 * Mark Howells-Mead | www.markweb.ch
 * Mauro Bringolf | www.webkinder.ch/team/mauro/
+* Nico Martin | nicomartin.ch
 
 ## License
 Use this code freely, widely and for free. Provision of this code provides and implies no guarantee.

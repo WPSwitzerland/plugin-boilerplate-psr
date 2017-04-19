@@ -36,8 +36,11 @@ if (version_compare($wp_version, '4.7', '<') || version_compare(PHP_VERSION, '5.
     return;
 } else {
 
-    include 'Classes/Plugin.php';
-    $PLUGIN_KEY = new AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin();
-    $PLUGIN_KEY->set_PluginData(__FILE__);
-    $PLUGIN_KEY->run();
+    require_once 'Classes/Plugin.php';
+
+    function PLUGIN_PREFIX_PLUGIN_KEY()
+    {
+        return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
+    }
+    PLUGIN_PREFIX_PLUGIN_KEY();
 }
