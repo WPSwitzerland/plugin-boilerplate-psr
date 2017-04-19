@@ -7,10 +7,10 @@ class Plugin
  
     public static $instance;
 
-    public static $name    = '';
-    public static $pfx     = '';
-    public static $version = '';
-    public static $file    = '';
+    public static $name     = '';
+    public static $prefix   = '';
+    public static $version  = '';
+    public static $file     = '';
 
     public static function getInstance($file)
     {
@@ -22,7 +22,7 @@ class Plugin
             $data = get_plugin_data($file);
 
             self::$instance->name       = $data['Name'];
-            self::$instance->pfx        = 'PLUGIN_PREFIX';
+            self::$instance->prefix     = 'PLUGIN_PREFIX';
             self::$instance->version    = $data['Version'];
             self::$instance->file       = $file;
         }
