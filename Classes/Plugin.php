@@ -6,10 +6,10 @@ class Plugin
 {
  
     public static $instance;
-    public static $name     = '';
-    public static $prefix   = '';
-    public static $version  = '';
-    public static $file     = '';
+    public static $name = '';
+    public static $prefix = '';
+    public static $version = '';
+    public static $file = '';
 
     public static function getInstance($file)
     {
@@ -31,7 +31,7 @@ class Plugin
     /**
      * Non-essential dump function to debug variables.
      * @param  mixed  $var The variable to be output
-     * @param  boolean die    Should the script stop immediately after outputting $var?
+     * @param  boolean die Should the script stop immediately after outputting $var?
      */
     public function dump($var, $die = false)
     {
