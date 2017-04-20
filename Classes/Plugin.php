@@ -4,7 +4,7 @@ namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
 class Plugin
 {
-    public static $instance;
+    private static $instance;
     public static $name = '';
     public static $prefix = '';
     public static $version = '';
