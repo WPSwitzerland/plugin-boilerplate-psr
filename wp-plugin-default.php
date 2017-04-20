@@ -38,9 +38,9 @@ if (version_compare($wp_version, '4.7', '<') || version_compare(PHP_VERSION, '5.
 
     require_once 'Classes/Plugin.php';
 
-    function AUTHOR_NAMESPACE_PLUGIN_KEY()
+    function PLUGIN_PREFIX_get_instance()
     {
         return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
     }
-    AUTHOR_NAMESPACE_PLUGIN_KEY();
+    PLUGIN_PREFIX_get_instance();
 }
