@@ -4,17 +4,21 @@ namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
 class Plugin
 {
- 
     public static $instance;
     public static $name = '';
     public static $prefix = '';
     public static $version = '';
     public static $file = '';
 
+    /**
+     * Creates an instance if one isn't already available,
+     * then return the current instance.
+     * @param  string $file The file from which the class is being instantiated.
+     * @return object       The class instance.
+     */
     public static function getInstance($file)
     {
-        if(!isset(self::$instance) && !(self::$instance instanceof Plugin))
-        {
+        if (!isset(self::$instance) && !(self::$instance instanceof Plugin)) {
             self::$instance = new Plugin;
             self::$instance->run();
 
@@ -31,7 +35,7 @@ class Plugin
     /**
      * Non-essential dump function to debug variables.
      * @param  mixed  $var The variable to be output
-     * @param  boolean die Should the script stop immediately after outputting $var?
+     * @param  boolean $die Should the script stop immediately after outputting $var?
      */
     public function dump($var, $die = false)
     {
