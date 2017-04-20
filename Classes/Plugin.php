@@ -6,7 +6,6 @@ class Plugin
 {
  
     public static $instance;
-
     public static $name     = '';
     public static $prefix   = '';
     public static $version  = '';
@@ -21,14 +20,19 @@ class Plugin
 
             $data = get_plugin_data($file);
 
-            self::$instance->name       = $data['Name'];
-            self::$instance->prefix     = 'PLUGIN_PREFIX';
-            self::$instance->version    = $data['Version'];
-            self::$instance->file       = $file;
+            self::$instance->name = $data['Name'];
+            self::$instance->prefix = 'PLUGIN_PREFIX';
+            self::$instance->version = $data['Version'];
+            self::$instance->file = $file;
         }
         return self::$instance;
     }
 
+    /**
+     * Non-essential dump function to debug variables.
+     * @param  mixed  $var The variable to be output
+     * @param  boolean die    Should the script stop immediately after outputting $var?
+     */
     public function dump($var, $die = false)
     {
         echo '<pre>' . print_r($var, 1) . '</pre>';
@@ -37,6 +41,10 @@ class Plugin
         }
     }
 
+    /**
+     * Execution function which is called after the class has been initialized.
+     * This contains hook and filter assignments, etc.
+     */
     private function run()
     {
         add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
