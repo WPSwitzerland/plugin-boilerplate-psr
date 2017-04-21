@@ -26,21 +26,22 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 3. Rename the file ``wp-plugin-default.php`` to use the same name as the folder you've created.
 4. If you want to link any CSS, JavaScript or image files from your plugin, use a folder called ``assets``. 
 5. Language files belong in the ``languages`` folder.
-6. Replace the following uppercase text markers in the PHP files and in the ``composer.json`` file. Don't change ``PHP_VERSION``: this is a [pre-defined PHP constant](http://php.net/manual/en/reserved.constants.php), which the code uses to check compatability.
+6. Replace the following uppercase text markers in the PHP files and in the ``composer.json`` file. Don't change ``PHP_VERSION``: this is a [pre-defined PHP constant](http://php.net/manual/en/reserved.constants.php), which the code uses to check compatibility.
     - *PLUGIN_NAME* is the title or name of the plugin which appears in plugin overview lists.
     - *PLUGIN_URI* is the web address where users can find out details of your plugin. e.g. in the WordPress Plugin Directory, in Github, or on your website. This URI appears in the plugin overview list in WordPress Admin and in the WordPress Plugin Directory.
     - *PLUGIN_DESCRIPTION* is a text description of what the plugin does and what requirements it might have. Make it readable and useful!
     - *PLUGIN_AUTHOR* is your name or company name.
     - *AUTHOR_URI* is the address of your website.
     - *AUTHOR_EMAIL* is your email address.
-    - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin; lowercase and featuring underscores instead of spaces.
+    - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin; lowercase and featuring underscores instead of spaces. (``my_plugin``)
     - *PLUGIN_DOMAIN* is the slug of the plugin: for example, this repository's slug is *wpswitzerland/wp-plugin-default*.
-    - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.
+    - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.  (``my-plugin``)
 7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_NAMESPACE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\WpPluginDefault``.)
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
 9. Check and replace the PHP version number *5.3* and the WordPress version number *4.7* in the main plugin file and in the ``composer.json`` file, according to your own plugin's requirements.
     - As this code uses [PHP namespaces](http://php.net/manual/en/language.namespaces.php), the code will only work in PHP 5.3 or newer. Bear in mind that WordPress officially [still supports servers using PHP 5.2.4](https://wordpress.org/about/requirements/), so the version control code in the main plugin file ensures that your plugin won't break older environments. (It will automatically refuse to be activated.)
 10. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
+11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$wp_plugin_default = wp_plugin_default_get_instance()`` or ``$wpswitzerland_wp_plugin_default = wp_plugin_default_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
 
@@ -96,6 +97,7 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 ## Contributors
 * Mark Howells-Mead | www.markweb.ch
 * Mauro Bringolf | www.webkinder.ch/team/mauro/
+* Nico Martin | www.nicomartin.ch
 
 ## License
 Use this code freely, widely and for free. Provision of this code provides and implies no guarantee.
