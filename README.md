@@ -1,7 +1,9 @@
-# WordPress plugin starter code
+# WordPress plugin boilerplate - PSR standard
 
 ## Description
 A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 5.3 or newer.
+
+The code in this boilerplate adheres to the PSR-2 coding guidelines, not WordPress' own standards.
 
 You're currently reading the contents of ``README.md``, which is not required for your plugin. (Although your own version is recommended for documentational purposes.)
 
@@ -21,9 +23,9 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 
 ### Manual usage
 
-1. Download the zip ``wp-plugin-default`` from GitHub, unpack it, and put the generated folder in your ``wp-content/plugins`` directory.
+1. Download the zip ``plugin-boilerplate-psr`` from GitHub, unpack it, and put the generated folder in your ``wp-content/plugins`` directory.
 2. Rename the folder to reflect your own plugin name. This must be a unique name, so use a prefix which is specific to you as part of the plugin name. Uses dashes to separate words: ``my-plugin``.
-3. Rename the file ``wp-plugin-default.php`` to use the same name as the folder you've created.
+3. Rename the file ``plugin-boilerplate-psr.php`` to use the same name as the folder you've created.
 4. If you want to link any CSS, JavaScript or image files from your plugin, use a folder called ``assets``. 
 5. Language files belong in the ``languages`` folder.
 6. Replace the following uppercase text markers in the PHP files and in the ``composer.json`` file. Don't change ``PHP_VERSION``: this is a [pre-defined PHP constant](http://php.net/manual/en/reserved.constants.php), which the code uses to check compatibility.
@@ -34,16 +36,21 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
     - *AUTHOR_URI* is the address of your website.
     - *AUTHOR_EMAIL* is your email address.
     - *TEXT_DOMAIN* is the text domain which you're using for translations. This should match the folder name of the plugin; lowercase and featuring underscores instead of spaces. (``my_plugin``)
-    - *PLUGIN_DOMAIN* is the slug of the plugin: for example, this repository's slug is *wpswitzerland/wp-plugin-default*.
+    - *PLUGIN_DOMAIN* is the slug of the plugin: for example, this repository's slug is *wpswitzerland/plugin-boilerplate-psr*.
     - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.  (``my-plugin``)
-7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_NAMESPACE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\WpPluginDefault``.)
+7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_NAMESPACE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\PluginBoilerplatePsr``.)
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
 9. Check and replace the PHP version number *5.3* and the WordPress version number *4.7* in the main plugin file and in the ``composer.json`` file, according to your own plugin's requirements.
     - As this code uses [PHP namespaces](http://php.net/manual/en/language.namespaces.php), the code will only work in PHP 5.3 or newer. Bear in mind that WordPress officially [still supports servers using PHP 5.2.4](https://wordpress.org/about/requirements/), so the version control code in the main plugin file ensures that your plugin won't break older environments. (It will automatically refuse to be activated.)
 10. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
-11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$wp_plugin_default = wp_plugin_default_get_instance()`` or ``$wpswitzerland_wp_plugin_default = wp_plugin_default_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
+11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()`` or ``$wpswitzerland_plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 3.0.0
+* Rework code to better adhere to OOP principles.
+* Hooking, filtering and function calls should ideally no longer be applied in the ``__construct`` function. See [Tom McFarlin's blog post](https://tommcfarlin.com/wordpress-plugin-constructors-hooks/) which details the reasons. This requirement is, however, not enforced in the repository code.
+* Renamed repository to ``plugin-boilerplate-psr``, which more accurately describes the basis of the repository.
 
 ### 2.3.2
 * Update README.txt with markers.
