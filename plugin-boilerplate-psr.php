@@ -15,7 +15,7 @@ if (version_compare($wp_version, '4.7', '<') || version_compare(PHP_VERSION, '5.
     {
         echo '<div class="error"><p>' . sprintf(
             __('“%1$s” requires PHP %2$s (or newer) and WordPress %3$s (or newer) to function properly. Your site is using PHP %4$s and WordPress %5$s. Please upgrade. The plugin has been automatically deactivated.', 'TEXT_DOMAIN'),
-            'PLUGIN NAME',
+            'PLUGIN_NAME',
             '5.3',
             '4.7',
             PHP_VERSION,
