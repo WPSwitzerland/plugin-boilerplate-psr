@@ -32,8 +32,6 @@ if (version_compare($wp_version, '4.7', '<') || version_compare(PHP_VERSION, '5.
         deactivate_plugins(plugin_basename(__FILE__));
     }
     add_action('admin_init', 'PLUGIN_PREFIX_deactivate_self');
-
-    return;
 } else {
     require_once 'Classes/Plugin.php';
 
