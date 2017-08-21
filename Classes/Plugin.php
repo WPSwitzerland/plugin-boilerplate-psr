@@ -20,7 +20,6 @@ class Plugin
     {
         if (!isset(self::$instance) && !(self::$instance instanceof Plugin)) {
             self::$instance = new Plugin;
-            self::$instance->run();
 
             $data = get_plugin_data($file);
 
@@ -28,6 +27,8 @@ class Plugin
             self::$instance->prefix = 'PLUGIN_PREFIX';
             self::$instance->version = $data['Version'];
             self::$instance->file = $file;
+            
+            self::$instance->run();
         }
         return self::$instance;
     }
