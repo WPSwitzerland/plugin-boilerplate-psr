@@ -33,7 +33,8 @@ if (version_compare($wp_version, '4.7', '<') || version_compare(PHP_VERSION, '5.
     }
     add_action('admin_init', 'PLUGIN_PREFIX_deactivate_self');
 } else {
-    require_once 'Classes/Plugin.php';
+    include_once 'helpers.php';
+    include_once 'Classes/Plugin.php';
 
     function PLUGIN_PREFIX_get_instance()
     {
