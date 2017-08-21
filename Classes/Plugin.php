@@ -13,6 +13,7 @@ class Plugin
     /**
      * Creates an instance if one isn't already available,
      * then return the current instance.
+     *
      * @param  string $file The file from which the class is being instantiated.
      * @return object       The class instance.
      */
@@ -20,7 +21,6 @@ class Plugin
     {
         if (!isset(self::$instance) && !(self::$instance instanceof Plugin)) {
             self::$instance = new Plugin;
-            self::$instance->run();
 
             $data = get_plugin_data($file);
 
@@ -28,21 +28,10 @@ class Plugin
             self::$instance->prefix = 'PLUGIN_PREFIX';
             self::$instance->version = $data['Version'];
             self::$instance->file = $file;
+
+            self::$instance->run();
         }
         return self::$instance;
-    }
-
-    /**
-     * Non-essential dump function to debug variables.
-     * @param  mixed  $var The variable to be output
-     * @param  boolean $die Should the script stop immediately after outputting $var?
-     */
-    public function dump($var, $die = false)
-    {
-        echo '<pre>' . print_r($var, 1) . '</pre>';
-        if ($die) {
-            die();
-        }
     }
 
     /**
