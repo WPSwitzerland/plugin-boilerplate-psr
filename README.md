@@ -1,7 +1,7 @@
 # WordPress plugin boilerplate - PSR standard
 
 ## Description
-A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 5.3 or newer.
+A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 7.1 or newer.
 
 You're currently reading the contents of ``README.md``, which is not required for your plugin. (Although your own version is recommended for documentational purposes.)
 
@@ -41,12 +41,17 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
     - *PLUGIN_PREFIX* is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin.  (``my-plugin``)
 7. Replace the namespace ``AUTHOR_NAMESPACE\PLUGIN_NAMESPACE`` in ``Classes/Plugin.php`` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be ``Wpswitzerland\PluginBoilerplatePsr``.)
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is *essential*, so that you (and the plugin users) can manage plugin usage.
-9. Check and replace the PHP version number *5.3* and the WordPress version number *4.7* in the main plugin file and in the ``composer.json`` file, according to your own plugin's requirements.
+9. Check and replace the PHP version number *7.1* and the WordPress version number *4.9* in the main plugin file and in the ``composer.json`` file, according to your own plugin's requirements.
     - As this code uses [PHP namespaces](http://php.net/manual/en/language.namespaces.php), the code will only work in PHP 5.3 or newer. Bear in mind that WordPress officially [still supports servers using PHP 5.2.4](https://wordpress.org/about/requirements/), so the version control code in the main plugin file ensures that your plugin won't break older environments. (It will automatically refuse to be activated.)
 10. ``README.txt`` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the *Requires at least*, *Tested up to* and *Stable tag* information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
 11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()`` or ``$wpswitzerland_plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 4.0.0
+* Bump WordPress core version requirement to 4.9.
+* Bump PHP version requirement to 7.1.
+* Bump composer/installers dependency to 1.4.0.
 
 ### 3.0.0
 * Rework code to better adhere to OOP principles.
