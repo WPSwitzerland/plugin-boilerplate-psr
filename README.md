@@ -1,6 +1,7 @@
 # WordPress plugin boilerplate - PSR standard
 
 ## Description
+
 A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 7.1 or newer.
 
 You're currently reading the contents of ``README.md``, which is not required for your plugin. (Although your own version is recommended for documentational purposes.)
@@ -8,18 +9,23 @@ You're currently reading the contents of ``README.md``, which is not required fo
 The file ``README.txt`` is the one which the WordPress Plugin Repository needs.
 
 ## Coding Standards
+
 The code in this boilerplate adheres to the [PSR-2 Coding Standard](http://www.php-fig.org/psr/psr-2/), not WordPress Coding Standards. For a WordPress Coding Standards version, use [this version](https://github.com/WPSwitzerland/plugin-boilerplate-wordpress) instead.
 
 ## Usage
+
 This code has no function of its own. It is a starting point for plugin developers. Do not install this code as a plugin without first customizing it.
 
 ### Liability
+
 The contributors to this code accept no responsibility for correct and accurate code. Use the code at your own risk.
 
 ### Kickstart using a Shell script
+
 If you're happy working with shell scripts, then you can use https://github.com/WPSwitzerland/plugin-builder, which will use prompts to automatically customize code in this plugin for you.
 
 ### Composer
+
 If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don't want your generated plugin to be used with Composer, then remove the ``composer.json`` file from your generated plugin.
 
 ### Manual usage
@@ -47,6 +53,9 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()`` or ``$wpswitzerland_plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 4.0.1
+* Use `get_bloginfo('version')` to get WordPress Core version number.
 
 ### 4.0.0
 * Bump WordPress core version requirement to 4.9.
