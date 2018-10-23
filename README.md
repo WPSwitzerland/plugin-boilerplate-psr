@@ -54,6 +54,9 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 
 ## Changelog
 
+### 4.0.2
+* Formal GitHub release. No code changes.
+
 ### 4.0.1
 * Use `get_bloginfo('version')` to get WordPress Core version number.
 
