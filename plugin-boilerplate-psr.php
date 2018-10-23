@@ -37,7 +37,7 @@ if (version_compare(get_bloginfo('version'), '4.9', '<') || version_compare(PHP_
 } else {
 	require_once 'Classes/Plugin.php';
 
-	function PLUGIN_PREFIX_get_instance()
+  function PLUGIN_PREFIX_get_instance()
 	{
 		return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
 	}
