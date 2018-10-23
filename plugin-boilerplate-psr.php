@@ -10,7 +10,7 @@ Text Domain: TEXT_DOMAIN
 Domain Path: /languages
  */
 
-if (version_compare($wp_version, '4.9', '<') || version_compare(PHP_VERSION, '7.1', '<')) {
+if (version_compare(get_bloginfo('version'), '4.9', '<') || version_compare(PHP_VERSION, '7.1', '<')) {
 	function PLUGIN_PREFIX_compatability_warning()
 	{
 		echo '<div class="error"><p>' . sprintf(
