@@ -35,9 +35,10 @@ if (version_compare(get_bloginfo('version'), '4.9', '<') || version_compare(PHP_
 
 	return;
 } else {
-	require_once 'Classes/Plugin.php';
+	require_once 'inc/helpers.php';
+	require_once 'src/Plugin.php';
 
-  function PLUGIN_PREFIX_get_instance()
+	function PLUGIN_PREFIX_get_instance()
 	{
 		return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
 	}
