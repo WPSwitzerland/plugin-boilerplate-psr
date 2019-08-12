@@ -54,6 +54,11 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 
 ## Changelog
 
+### 4.1.0
+* Restructure and tidy PHP code using PHPCS
+* Add ruleset.xml and .editorconfig
+* Update PHP and WordPress version requirements
+
 ### 4.0.2
 * Formal GitHub release. No code changes.
 
