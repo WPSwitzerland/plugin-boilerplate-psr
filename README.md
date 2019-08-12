@@ -2,9 +2,9 @@
 
 ## Description
 
-A starting point for development of a WordPress plugin using PHP namespaces. The use of PHP namespaces means that plugins built using this code require PHP 7.1 or newer.
+A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 7.2 and WordPress 5.2 - not for technical reasons, but in order to encourage a more modern installation.
 
-You're currently reading the contents of ``README.md``, which is not required for your plugin. (Although your own version is recommended for documentational purposes.)
+You're currently reading the contents of ``README.md``, which is not required for your plugin. (Your own version is recommended for documentation purposes.)
 
 The file ``README.txt`` is the one which the WordPress Plugin Repository needs.
 
@@ -14,7 +14,7 @@ The code in this boilerplate adheres to the [PSR-2 Coding Standard](http://www.p
 
 ## Usage
 
-This code has no function of its own. It is a starting point for plugin developers. Do not install this code as a plugin without first customizing it.
+This code has no function of its own. It is a starting point for plugin developers. Do not install this code as a plugin without first customising it.
 
 ### Liability
 
@@ -22,7 +22,7 @@ The contributors to this code accept no responsibility for correct and accurate 
 
 ### Kickstart using a Shell script
 
-If you're happy working with shell scripts, then you can use https://github.com/WPSwitzerland/plugin-builder, which will use prompts to automatically customize code in this plugin for you.
+If you're happy working with shell scripts, then you can use https://github.com/WPSwitzerland/plugin-builder, which will use prompts to automatically customise code in this plugin for you.
 
 ### Composer
 
