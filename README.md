@@ -33,7 +33,7 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 1. Download the zip ``plugin-boilerplate-psr`` from GitHub, unpack it, and put the generated folder in your ``wp-content/plugins`` directory.
 2. Rename the folder to reflect your own plugin name. This must be a unique name, so use a prefix which is specific to you as part of the plugin name. Uses dashes to separate words: ``my-plugin``.
 3. Rename the file ``plugin-boilerplate-psr.php`` to use the same name as the folder you've created.
-4. If you want to link any CSS, JavaScript or image files from your plugin, use a folder called ``assets``. 
+4. If you want to link any CSS, JavaScript or image files from your plugin, use a folder called ``assets``.
 5. Language files belong in the ``languages`` folder.
 6. Replace the following uppercase text markers in the PHP files and in the ``composer.json`` file. Don't change ``PHP_VERSION``: this is a [pre-defined PHP constant](http://php.net/manual/en/reserved.constants.php), which the code uses to check compatibility.
     - *PLUGIN_NAME* is the title or name of the plugin which appears in plugin overview lists.
@@ -53,6 +53,11 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 11. If you need to refer to the instance returned by the ``get_instance`` function in your code, then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, ``$plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()`` or ``$wpswitzerland_plugin_boilerplate_psr = plugin_boilerplate_psr_get_instance()``. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 4.1.0
+* Restructure and tidy PHP code using PHPCS
+* Add ruleset.xml and .editorconfig
+* Update PHP and WordPress version requirements
 
 ### 4.0.2
 * Formal GitHub release. No code changes.

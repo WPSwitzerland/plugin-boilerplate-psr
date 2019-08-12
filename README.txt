@@ -2,8 +2,8 @@
 Contributors: YOUR WORDPRESS.ORG USERNAME (LOWERCASE)
 Donate link: URI, IF YOU HAVE ONE
 Tags: COMMA, SEPARATED, RELEVANT, TAGS
-Requires at least: 4.9
-Tested up to: 4.9.8
+Requires at least: 5.2
+Tested up to: 5.2
 Stable tag: 0.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
