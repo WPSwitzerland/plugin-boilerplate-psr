@@ -1,0 +1,25 @@
+# editorconfig for Say Hello Projects
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = off
+tab_width=4
+
+[{*.html,*.shtm,*.shtml,*.htm,*.php,*.inc}]
+indent_style = tab
+tab_width = 4
+
+[{*.scss,*.css}]
+indent_style = tab
+tab_width = 4
+
+[{.babelrc,.stylelintrc,.eslintrc,jest.config,*.json,*.jsb3,*.jsb2,*.bowerrc,jshint.json,*.jshintrc,*.js.map}]
+indent_style = space
+
+[{Makefile,.env,*.yml,*.yaml}]
+indent_style = space
