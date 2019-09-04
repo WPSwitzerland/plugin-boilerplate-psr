@@ -125,7 +125,7 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
 * Initial version from 2014
 
 ## Contributors
-* Mark Howells-Mead | www.markweb.ch
+* Mark Howells-Mead | [howellsmead.com](https://www.howellsmead.com)
 * Mauro Bringolf | [maurobringolf.ch](https://maurobringolf.ch)
 * Nico Martin | www.nicomartin.ch
 
