@@ -5,10 +5,10 @@ namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 class Plugin
 {
 	private static $instance;
-	public static $name = '';
-	public static $prefix = '';
-	public static $version = '';
-	public static $file = '';
+	public $name = '';
+	public $prefix = '';
+	public $version = '';
+	public $file = '';
 
 	/**
 	 * Creates an instance if one isn't already available,
