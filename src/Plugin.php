@@ -21,6 +21,10 @@ class Plugin
 	{
 		if (!isset(self::$instance) && !(self::$instance instanceof Plugin)) {
 			self::$instance = new Plugin;
+			
+			if (! function_exists('get_plugin_data')) {
+				include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+			}
 
 			$data = get_plugin_data($file);
 
