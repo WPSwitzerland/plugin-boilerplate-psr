@@ -1,13 +1,18 @@
 <?php
 /*
-Plugin Name: PLUGIN_NAME
-Plugin URI: PLUGIN_URI
-Description: PLUGIN_DESCRIPTION
-Author: PLUGIN_AUTHOR (AUTHOR_EMAIL)
-Version: 0.0.1
-Author URI: AUTHOR_URI
-Text Domain: TEXT_DOMAIN
-Domain Path: /languages
+ * Plugin Name:       PLUGIN_NAME
+ * Plugin URI:        PLUGIN_URI
+ * Description:       PLUGIN_DESCRIPTION
+ * Author:            PLUGIN_AUTHOR (AUTHOR_EMAIL)
+ * Version:           0.0.1
+ * Author URI:        AUTHOR_URI
+ * Text Domain:       TEXT_DOMAIN
+ * Domain Path:       /languages
+ * Requires at least: 5.9
+ * Requires PHP:      8.0
+ * License:           GPL v3 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+ * Update URI:        AUTHOR_URI
  */
 
 if (version_compare(get_bloginfo('version'), '5.9', '<') || version_compare(PHP_VERSION, '8.0', '<')) {
