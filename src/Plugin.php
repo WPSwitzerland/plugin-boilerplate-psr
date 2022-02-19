@@ -2,6 +2,8 @@
 
 namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
+use function AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\PLUGIN_PREFIX_get_instance;
+
 class Plugin
 {
 	private static $instance;
@@ -9,6 +11,34 @@ class Plugin
 	public $prefix = '';
 	public $version = '';
 	public $file = '';
+
+	/**
+	 * Loads and initializes the provided classes.
+	 *
+	 * @param $classes
+	 */
+	private function loadClasses($classes)
+	{
+		foreach ($classes as $class) {
+			$class_parts = explode('\\', $class);
+			$class_short = end($class_parts);
+			$class_set   = $class_parts[count($class_parts) - 2];
+
+			if (!isset(PLUGIN_PREFIX_get_instance()->{$class_set}) || !is_object(PLUGIN_PREFIX_get_instance()->{$class_set})) {
+				PLUGIN_PREFIX_get_instance()->{$class_set} = new \stdClass();
+			}
+
+			if (property_exists(PLUGIN_PREFIX_get_instance()->{$class_set}, $class_short)) {
+				wp_die(sprintf(__('A problem has ocurred in the Theme. Only one PHP class named “%1$s” may be assigned to the “%2$s” object in the Theme.', 'sht'), $class_short, $class_set), 500);
+			}
+
+			PLUGIN_PREFIX_get_instance()->{$class_set}->{$class_short} = new $class();
+
+			if (method_exists(PLUGIN_PREFIX_get_instance()->{$class_set}->{$class_short}, 'run')) {
+				PLUGIN_PREFIX_get_instance()->{$class_set}->{$class_short}->run();
+			}
+		}
+	}
 
 	/**
 	 * Creates an instance if one isn't already available,
@@ -21,8 +51,8 @@ class Plugin
 	{
 		if (!isset(self::$instance) && !(self::$instance instanceof Plugin)) {
 			self::$instance = new Plugin;
-			
-			if (! function_exists('get_plugin_data')) {
+
+			if (!function_exists('get_plugin_data')) {
 				include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 			}
 
@@ -44,6 +74,15 @@ class Plugin
 	 */
 	private function run()
 	{
+
+		// Load individual pattern classes which contain
+		// grouped functionality. E.g. everything to do with a post type.
+		$this->loadClasses(
+			[
+				Pattern\Example::class,
+			]
+		);
+
 		add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
 	}
 

@@ -15,6 +15,8 @@
  * Update URI:        AUTHOR_URI
  */
 
+namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
+
 if (version_compare(get_bloginfo('version'), '5.9', '<') || version_compare(PHP_VERSION, '8.0', '<')) {
 	function PLUGIN_PREFIX_compatability_warning()
 	{
@@ -45,7 +47,7 @@ if (version_compare(get_bloginfo('version'), '5.9', '<') || version_compare(PHP_
 
 	function PLUGIN_PREFIX_get_instance()
 	{
-		return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
+		return Plugin::getInstance(__FILE__);
 	}
 	PLUGIN_PREFIX_get_instance();
 }
