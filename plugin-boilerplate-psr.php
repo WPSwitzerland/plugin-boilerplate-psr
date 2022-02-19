@@ -35,7 +35,7 @@ if (version_compare(get_bloginfo('version'), '5.9', '<') || version_compare(PHP_
 
 	return;
 } else {
-	require_once 'inc/helpers.php';
+
 	require_once 'src/Plugin.php';
 
 	function PLUGIN_PREFIX_get_instance()
