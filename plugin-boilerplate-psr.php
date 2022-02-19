@@ -10,14 +10,14 @@ Text Domain: TEXT_DOMAIN
 Domain Path: /languages
  */
 
-if (version_compare(get_bloginfo('version'), '5.2', '<') || version_compare(PHP_VERSION, '7.2', '<')) {
+if (version_compare(get_bloginfo('version'), '5.9', '<') || version_compare(PHP_VERSION, '8.0', '<')) {
 	function PLUGIN_PREFIX_compatability_warning()
 	{
 		echo '<div class="error"><p>' . sprintf(
 			__('“%1$s” requires PHP %2$s (or newer) and WordPress %3$s (or newer) to function properly. Your site is using PHP %4$s and WordPress %5$s. Please upgrade. The plugin has been automatically deactivated.', 'TEXT_DOMAIN'),
 			__('PLUGIN_NAME', 'TEXT_DOMAIN'),
-			'7.2',
-			'5.2',
+			'8.0',
+			'5.9',
 			PHP_VERSION,
 			$GLOBALS['wp_version']
 		) . '</p></div>';
