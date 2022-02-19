@@ -2,7 +2,7 @@
 
 ## Description
 
-A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 7.2 and WordPress 5.2 - not for technical reasons, but in order to encourage a more modern installation.
+A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 8.0 and WordPress 5.9 - partially for technical reasons, but also in order to encourage a more modern installation.
 
 You're currently reading the contents of `README.md`, which is not required for your plugin. (Your own version is recommended for documentation purposes.)
 
