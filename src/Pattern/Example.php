@@ -2,9 +2,6 @@
 
 namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Pattern;
 
-// Use function from plugin top-level namespace
-use function \AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\PLUGIN_PREFIX_get_instance;
-
 /**
  * Example child class
  *
