@@ -2,7 +2,7 @@
 
 ## Description
 
-A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 8.0 and WordPress 5.9 - partially for technical reasons, but also in order to encourage a more modern installation.
+A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 8.0 and WordPress 6.0 - partially for technical reasons, but also in order to encourage a more modern installation.
 
 You're currently reading the contents of `README.md`, which is not required for your plugin. (Your own version is recommended for documentation purposes.)
 
@@ -14,7 +14,7 @@ The code in this boilerplate adheres to the [PSR-2 Coding Standard](http://www.p
 
 ## Usage
 
-This code has no function of its own. It is a starting point for plugin developers. Do not install this code as a plugin without first customising it.
+This code has no function of its own. It is a starting point for plugin developers.
 
 ### Liability
 
@@ -23,10 +23,6 @@ The contributors to this code accept no responsibility for correct and accurate 
 ### Kickstart using a Shell script
 
 If you're happy working with shell scripts, then you can use https://github.com/WPSwitzerland/plugin-builder, which will use prompts to automatically customise code in this plugin for you.
-
-### Composer
-
-If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don't want your generated plugin to be used with Composer, then remove the `composer.json` file from your generated plugin.
 
 ### Manual usage
 
@@ -45,15 +41,25 @@ If you don't use [Composer](https://getcomposer.org/doc/00-intro.md) and you don
     - _TEXT_DOMAIN_ is the text domain which you're using for translations. This should match the folder name of the plugin; lowercase and featuring underscores instead of spaces. (`my_plugin`)
     - _PLUGIN_DOMAIN_ is the slug of the plugin: for example, this repository's slug is _wpswitzerland/plugin-boilerplate-psr_.
     - _PLUGIN_PREFIX_ is a unique prefix applied to function names, so that there is no conflict with other functions in the global namespace. This should ideally match the folder name of the plugin. (`my-plugin`)
-7. Replace the namespace `AUTHOR_NAMESPACE\PLUGIN_NAMESPACE` in `Classes/Plugin.php` with your own namespace. I recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be `Wpswitzerland\PluginBoilerplatePsr`.)
+7. Replace the namespace `AUTHOR_NAMESPACE\PLUGIN_NAMESPACE` in `Classes/Plugin.php` with your own namespace. We recommend using your own unique vendor prefix for the top-level namespace in all of your plugins, and the name of the plugin for the second-level namespace. Both of these namespace parts should be in [PascalCase](https://en.wikipedia.org/wiki/PascalCase). (For example, the namespace for the example code would be `Wpswitzerland\PluginBoilerplatePsr`.)
 8. Use and maintain the version number according to the specifications explained at http://semver.org/. This is _essential_, so that you (and the plugin users) can manage plugin usage.
-9. Check and replace the PHP version number _8.0_ and the WordPress version number _5.9_ in the main plugin file and in the `composer.json` file, according to your own plugin's requirements.
+9. Check and replace the PHP version number _8.0_ and the WordPress version number _6.0_ in the main plugin file according to your own plugin's requirements.
     - As this code uses [PHP namespaces](http://php.net/manual/en/language.namespaces.php), the code will only work in PHP 8.0 or newer. (It will automatically refuse to be activated.)
 10. Refer to [this dev note](https://make.wordpress.org/core/2021/06/29/introducing-update-uri-plugin-header-in-wordpress-5-8/) for details of the Update URI feature, which is part of the plugin header.
 11. `README.txt` is the file which the WordPress Plugin Repository uses. It is essential that you correctly maintain the _Requires at least_, _Tested up to_ and _Stable tag_ information whenever you make any changes, and it is also essential that you maintain the changelog. (Newest entries at the top.) [This reference guide](https://wordpress.org/plugins/about/svn/) to the WordPress SVN provides full information.
 12. If you need to refer to the instance returned by the `get_instance` function in your own code (e.g. theme), then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, `$plugin_boilerplate_psr = \AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\PLUGIN_PREFIX_get_instance()`. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 4.3.0
+
+-   Fix and improve autoloading.
+-   Update WordPress Core requirement to version 6.
+-   Remove plugin's own version checking. This is carried out automatically by using the version requirements in the plugin's header comment.
+-   Remove composer.json file.
+-   Update code formatting helpers.
+-   Fix array syntax in language-loading filter hook.
+-   Update README files.
 
 ### 4.2.0
 
