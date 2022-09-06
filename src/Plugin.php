@@ -2,8 +2,6 @@
 
 namespace AUTHOR_NAMESPACE\PLUGIN_NAMESPACE;
 
-use function AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\PLUGIN_PREFIX_get_instance;
-
 class Plugin
 {
 	private static $instance;
@@ -83,7 +81,7 @@ class Plugin
 			]
 		);
 
-		add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
+		add_action('plugins_loaded', [$this, 'loadPluginTextdomain']);
 	}
 
 	/**
