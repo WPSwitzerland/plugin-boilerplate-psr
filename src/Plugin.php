@@ -81,7 +81,7 @@ class Plugin
 			]
 		);
 
-		add_action('plugins_loaded', array($this, 'loadPluginTextdomain'));
+		add_action('plugins_loaded', [$this, 'loadPluginTextdomain']);
 	}
 
 	/**
