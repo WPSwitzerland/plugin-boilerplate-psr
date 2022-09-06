@@ -52,8 +52,6 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-require_once 'src/Plugin.php';
-
 function PLUGIN_PREFIX_get_instance()
 {
 	return AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\Plugin::getInstance(__FILE__);
