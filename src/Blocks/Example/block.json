@@ -7,10 +7,9 @@
 	"category": "widgets",
 	"icon": "admin-users",
 	"keywords": ["example", "demo"],
-	"textdomain": "shp_adrotech_members",
+	"textdomain": "TEXT_DOMAIN",
 	"supports": {
-		"align": ["wide", "full"],
-		"multiple": false
+		"align": ["wide", "full"]
 	},
 	"attributes": {},
 	"editorScript": "file:./assets/dist/scripts/editor.js",
