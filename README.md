@@ -2,7 +2,17 @@
 
 ## Description
 
-A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 8.0 and WordPress 6.0 - partially for technical reasons, but also in order to encourage a more modern installation.
+A starting point for development of a WordPress plugin using PHP namespaces. By default, the plugin demands PHP 8.1 and WordPress 6.2 - partially for technical reasons, but also in order to encourage a more modern installation.
+
+### JavaScript and CSS build processes
+
+The plugin contains Gulp/Webpack build processes for scripts, styles, block scripts and block styles. Before running them, make sure that you have prepared all of the files by ensuring that the steps listed below (“Manual usage”) have been carried out. Install the dependencies by running `npm install` in the root folder, then run `npm start` to start the watcher.
+
+### Blocks
+
+The plugin contains an example of registering a WordPress Block using the block.json methodology. The scripts and styles in this example are compiled as part of the build process detailed above. Maintain the folder structure in order to allow the build process to work correctly.
+
+### READMEs
 
 You're currently reading the contents of `README.md`, which is not required for your plugin. (Your own version is recommended for documentation purposes.)
 
@@ -50,6 +60,12 @@ If you're happy working with shell scripts, then you can use https://github.com/
 12. If you need to refer to the instance returned by the `get_instance` function in your own code (e.g. theme), then you can assign the return value of this function to a uniquely-named global variable. E.g. for the example code, `$plugin_boilerplate_psr = \AUTHOR_NAMESPACE\PLUGIN_NAMESPACE\PLUGIN_PREFIX_get_instance()`. Be very careful when naming this variable and avoid conflicts with any other PHP variables.
 
 ## Changelog
+
+### 4.4.0
+
+-   Add build processes for CSS and JavaScript.
+-   Add an example of a WordPress Block registered using block.json.
+-   Bump dependencies to WordPress 6.2 and PHP 8.1
 
 ### 4.3.0
 
