@@ -83,6 +83,8 @@ class Plugin
 		// grouped functionality. E.g. everything to do with a post type.
 		$this->loadClasses(
 			[
+				Blocks\Example::class,
+
 				Controller\Assets::class,
 			]
 		);

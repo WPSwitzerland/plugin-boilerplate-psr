@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "shp/example",
+	"title": "Example",
+	"description": "An example block.",
+	"category": "widgets",
+	"icon": "admin-users",
+	"keywords": ["example", "demo"],
+	"textdomain": "shp_adrotech_members",
+	"supports": {
+		"align": ["wide", "full"],
+		"multiple": false
+	},
+	"attributes": {},
+	"editorScript": "file:./assets/dist/scripts/editor.js",
+	"editorStyle": "file:./assets/dist/styles/editor/index.min.css",
+	"style": "file:./assets/dist/styles/shared/index.min.css",
+	"render": "file:./render.php"
+}
